@@ -1,0 +1,14 @@
+# Requirements for local processing (full pipeline with torch)
+torch>=2.9.0
+transformers>=4.47.0
+keybert==0.8.5
+sentence-transformers>=3.3.1
+fastapi>=0.115.0
+uvicorn>=0.34.0
+streamlit>=1.45.0
+pandas>=2.2.0
+openpyxl>=3.1.0
+plotly>=6.1.0
+pydantic>=2.11.0
+tqdm>=4.66.0
+kaleido>=0.2.0

@@ -4,24 +4,20 @@ from pathlib import Path
 import plotly.express as px
 
 # Configure page
-LOGO_PATH = Path(__file__).parent.parent / "patrkaar_ai_logo.jpeg"
+LOGO_PATH = Path(__file__).parent / "patrkaar_ai_logo.jpeg"
+if not LOGO_PATH.exists():
+    LOGO_PATH = Path(__file__).parent.parent / "patrkaar_ai_logo.jpeg"
 
-st.set_page_config(
-    page_title="Patrakaar.AI News Dashboard",
-    layout="wide",
-    page_icon=str(LOGO_PATH) if LOGO_PATH.exists() else "📰"
-)
 
-# Display logo in header
+
+# Header with logo
 if LOGO_PATH.exists():
-    col_logo, col_title = st.columns([1, 4])
-    with col_logo:
+    try:
         st.image(str(LOGO_PATH), width=80)
-    with col_title:
-        st.title("Patrakaar.AI News Intelligence Dashboard")
-else:
-    st.title("📰 Patrakaar.AI News Intelligence Dashboard")
-    st.warning("Logo file not found at: " + str(LOGO_PATH))
+    except Exception:
+        pass
+
+st.title("Patrakaar.AI News Intelligence Dashboard")
 
 # Custom CSS for confidence color-coding
 st.markdown("""
@@ -64,7 +60,6 @@ if selected_topic != "All":
 filtered_df = filtered_df[filtered_df["confidence"] >= confidence_threshold]
 
 # Main content
-st.title("📰 Patrakaar.AI News Intelligence Dashboard")
 st.metric("Total Articles", len(filtered_df))
 
 # Analytics panel
