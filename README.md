@@ -40,11 +40,11 @@ Raw Articles (Excel)
 ┌───────────────────────────────────────────────────┐
 │                  processor.py                     │
 │                                                   │
-│  ┌─────────────────┐  ┌──────────┐  ┌──────────┐ │
-│  │  DistilBART     │  │ KeyBERT  │  │BART-MNLI │ │
-│  │  Summarization  │  │ Keywords │  │Zero-shot │ │
-│  │  (1024t limit)  │  │  (MMR)   │  │   Topic  │ │
-│  └─────────────────┘  └──────────┘  └──────────┘ │
+│  ┌─────────────────┐  ┌──────────┐  ┌──────────┐  │
+│  │  DistilBART     │  │ KeyBERT  │  │BART-MNLI │  │
+│  │  Summarization  │  │ Keywords │  │Zero-shot │  │
+│  │  (1024t limit)  │  │  (MMR)   │  │   Topic  │  │
+│  └─────────────────┘  └──────────┘  └──────────┘  │
 └───────────────────────┬───────────────────────────┘
                         │
               Structured JSON / CSV
