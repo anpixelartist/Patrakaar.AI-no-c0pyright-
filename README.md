@@ -1,5 +1,8 @@
 # Patrakaar.AI — News Intelligence Pipeline
 
+
+check it out here(https://anpixelartist-patrakaar-ai-no-c0pyright--srcui-ln73xa.streamlit.app/)
+
 An end-to-end NLP pipeline that summarizes news articles, extracts keywords, and classifies topics — served through a FastAPI backend and an interactive Streamlit dashboard.
 
 **Dataset:** 1,035 articles (Excel) → structured JSON/CSV with 9 fields per article.
